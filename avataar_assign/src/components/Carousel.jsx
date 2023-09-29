@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import { Carousel } from 'react-responsive-carousel';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import {Carousel} from '3d-react-carousal';
 
-const images = [
-  'https://thumbs.dreamstime.com/z/career-growth-development-advancement-design-information-related-to-professional-d-illustration-isolated-white-105447871.jpg?w=768',
-  'https://miro.medium.com/v2/resize:fit:1100/format:webp/0*r_Rf_XgFzYMoS9vO.jpg',
+let images = [
+    <img  src="https://picsum.photos/800/300/?random" alt="1" />,
+    <img  src="https://picsum.photos/800/301/?random" alt="2" />  ,
+    <img  src="https://picsum.photos/800/302/?random" alt="3" />  ,
+    <img  src="https://picsum.photos/800/303/?random" alt="4" />  ,
+    <img src="https://picsum.photos/800/304/?random" alt="5" />   
 ];
 
 function ImgCarousel () {
@@ -40,7 +44,7 @@ function ImgCarousel () {
 
   return (
     <div className="relative">
-    <Carousel selectedItem={currentIndex} showThumbs={false} showStatus={false} showArrows={true}>
+    {/* <Carousel selectedItem={currentIndex} showThumbs={false} showStatus={false} showArrows={true}>
       {images.map((image, index) => (
         <div key={index}>
           <img
@@ -50,13 +54,16 @@ function ImgCarousel () {
           />
         </div>
       ))}
-    </Carousel>
-    <button className="prev-button" onClick={handlePrev}>
+    </Carousel> */}
+
+    <Carousel slides = {images} autoplay={true} interval={3000} arrows={true}/>
+
+    {/* <button className="prev-button" onClick={handlePrev}>
       Prev
     </button>
     <button className="next-button" onClick={handleNext}>
       Next
-    </button>
+    </button> */}
   </div>
   );
 };

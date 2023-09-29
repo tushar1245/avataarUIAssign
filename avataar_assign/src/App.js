@@ -5,7 +5,10 @@ function App() {
   return (
     <div >
       <Navbar />
+      <div className='mt-10'>
       <ImgCarousel />
+      </div>
+      
     </div>
   );
 }
