@@ -9,7 +9,7 @@ function App() {
      
       <TextComponent />
      
-      <div className='mt-20'>
+      <div className='mt-40'>
         <ImageCarousel />
       </div>
       

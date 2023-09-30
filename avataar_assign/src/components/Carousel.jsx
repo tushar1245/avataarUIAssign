@@ -77,7 +77,7 @@ function ImageCarousel() {
               }`}
             />
             {index === 2 && (
-              <div className="absolute text-center bottom-0 left-0 right-0 p-2 bg-black text-white opacity-75">
+              <div className="absolute text-center rounded-b-xl bottom-0 left-0 right-0 p-2 bg-black text-white opacity-75">
                 <p className="text-sm">{item.caption}</p>
               </div>
             )}

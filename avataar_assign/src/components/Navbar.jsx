@@ -72,7 +72,7 @@ const Navbar = () => {
   const textSizeClass = windowWidth <= 768 ? 'text-xl' : 'text-2xl';
 
   return (
-    <nav className="bg-gray-800 p-4 flex items-center">
+    <nav className="bg-gray-800  flex items-center fixed p-4 left-0 right-0 top-0">
     <div className={`text-lg text-white flex items-center ${textSizeClass}`}>
         <span className="text-white font-bold mr-2">E-COMM</span>
     </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
         </div>
       )}
 
-       <label class="fixed right-3">
+       <label class="transform translate-x-1/2">
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                 <svg class="h-5 w-5 fill-black" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
                     height="30" viewBox="0 0 30 30">
