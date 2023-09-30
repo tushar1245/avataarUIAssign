@@ -10,6 +10,17 @@ const images = [
   "https://picsum.photos/800/306/?random",
 ];
 
+const captions = [
+  "Product 1",
+  "Product 2",
+  "Product 3",
+  "Product 4",
+  "Product 5",
+  "Product 6",
+  "Product 7",
+];
+
+
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -24,7 +35,7 @@ function ImageCarousel() {
   const displayedImages = [];
   for (let i = -2; i <= 2; i++) {
     const index = (currentIndex + i + images.length) % images.length;
-    displayedImages.push(images[index]);
+    displayedImages.push({ image: images[index], caption: captions[index] });
   }
 
   const handleDotClick = (index) => {
@@ -45,7 +56,7 @@ function ImageCarousel() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex justify-center items-center">
-        {displayedImages.map((image, index) => (
+        {displayedImages.map((item, index) => (
           <div  
             key={index}
             className={`transform ${
@@ -59,12 +70,17 @@ function ImageCarousel() {
             }`}
           >
             <img
-              src={image}
+              src={item.image}
               alt={`Image ${index + 1}`}
               className={`w-full  rounded-xl h-60 ${
                 index === 2 ? 'object-cover' : 'object-contain'
               }`}
             />
+            {index === 2 && (
+              <div className="absolute text-center bottom-0 left-0 right-0 p-2 bg-black text-white opacity-75">
+                <p className="text-sm">{item.caption}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
