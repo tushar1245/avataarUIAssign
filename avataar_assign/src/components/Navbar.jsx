@@ -64,7 +64,7 @@ const Navbar = () => {
     setVisibleItems(items.slice(0, numVisibleItems));
     setHiddenItems(items.slice(numVisibleItems));
 
-    //console.log(windowWidth);
+    // console.log(windowWidth);
     
   }, [windowWidth]);
 

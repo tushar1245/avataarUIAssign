@@ -1,14 +1,16 @@
 import ImageCarousel from './components/Carousel';
-//import ImgCarousel from './components/Carousel';
 import Navbar from './components/Navbar';
+import TextComponent from './components/TextComp';
 
-function App() {
+function App() {  
   return (
     <div >
       <Navbar />
-      <div className='mt-40'>
-      {/* <ImgCarousel /> */}
-      <ImageCarousel />
+     
+      <TextComponent />
+     
+      <div className='mt-20'>
+        <ImageCarousel />
       </div>
       
     </div>
